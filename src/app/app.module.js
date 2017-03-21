@@ -13,14 +13,24 @@ var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var myhttp_component_1 = require("./myhttp/myhttp.component");
 var http_1 = require('@angular/http');
+var router_1 = require("@angular/router");
+var app_routes_1 = require("./app.routes");
+var about_component_1 = require("./about.component");
+var table_component_1 = require("./table.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, myhttp_component_1.MyHTTPComponent],
-            bootstrap: [app_component_1.AppComponent, myhttp_component_1.MyHTTPComponent]
+            imports: [platform_browser_1.BrowserModule,
+                http_1.HttpModule,
+                router_1.RouterModule.forRoot(app_routes_1.routes)],
+            declarations: [app_component_1.AppComponent,
+                myhttp_component_1.MyHTTPComponent,
+                table_component_1.TableComponent,
+                about_component_1.AboutComponent],
+            bootstrap: [app_component_1.AppComponent,
+                myhttp_component_1.MyHTTPComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

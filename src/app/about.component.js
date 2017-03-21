@@ -13,9 +13,9 @@ var AboutComponent = (function () {
     function AboutComponent() {
         this.fruits = ['Apple', 'Orange', 'Mango', 'Grapes'];
     }
-    //myfruit = this.fruits[1];
     AboutComponent.prototype.clicked = function () {
         console.log('clicked');
+        this.myfruit = this.fruits[1];
     };
     AboutComponent = __decorate([
         core_1.Component({

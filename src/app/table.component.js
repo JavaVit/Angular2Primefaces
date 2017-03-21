@@ -11,21 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var TableComponent = (function () {
     function TableComponent() {
-        this.dtOptions = {};
     }
-    TableComponent.prototype.ngOnInit = function () {
-        this.dtOptions = {
-            ajax: 'data/data.json',
-            "columns": [
-                { "title": "Имя", "data": "name" },
-                { "title": "Должность", "data": "position" },
-                { "title": "Оффис", "data": "office" },
-                { "title": "Внутр", "data": "extn" },
-                { "title": "Принят", "data": "start_date" },
-                { "title": "Ставка", "data": "salary" }
-            ]
-        };
-    };
     TableComponent = __decorate([
         core_1.Component({
             selector: 'app-table',
