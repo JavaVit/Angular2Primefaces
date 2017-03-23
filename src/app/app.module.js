@@ -17,6 +17,11 @@ var router_1 = require("@angular/router");
 var app_routes_1 = require("./app.routes");
 var about_component_1 = require("./about.component");
 var table_component_1 = require("./table.component");
+var datatabledemo_1 = require("./datatabledemo");
+var datatable_1 = require("primeng/components/datatable/datatable");
+var shared_1 = require("primeng/components/common/shared");
+var common_1 = require("@angular/common");
+var CarService_1 = require("./service/CarService");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,13 +29,16 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule,
                 http_1.HttpModule,
-                router_1.RouterModule.forRoot(app_routes_1.routes)],
+                router_1.RouterModule.forRoot(app_routes_1.routes),
+                common_1.CommonModule, shared_1.SharedModule, datatable_1.DataTableModule],
             declarations: [app_component_1.AppComponent,
                 myhttp_component_1.MyHTTPComponent,
                 table_component_1.TableComponent,
-                about_component_1.AboutComponent],
+                about_component_1.AboutComponent,
+                datatabledemo_1.DataTableDemo],
             bootstrap: [app_component_1.AppComponent,
-                myhttp_component_1.MyHTTPComponent]
+                myhttp_component_1.MyHTTPComponent],
+            providers: [CarService_1.CarService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

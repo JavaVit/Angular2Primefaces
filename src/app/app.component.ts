@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
                 <a [routerLink]="['/']">Home</a>
                 <a [routerLink]="['/table']">Table</a>
                 <a [routerLink]="['/about']">About</a>
+                <a [routerLink]="['/prime-table']">PrimeTable</a>
         
                 <div class="outer-outlet">
                    <router-outlet></router-outlet>
